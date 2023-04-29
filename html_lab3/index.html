@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div
+      class="micro-data"
+      itemscope
+      itemtype="http://data-vocabulary.org/Organization"
+    >
+      <span itemprop="name">OS , ITI </span>
+      <span itemprop="tel">01144342836</span>
+      <span itemprop="url">http://www.iti.gov.eg/ </span>
+      <div itemscope itemtype="http://data-vocabulary.org/Address">
+        <span itemprop="street-address"
+          >km 28 cairo-alexandria Desert road
+        </span>
+        <span itemprop="locality">alexandria</span>
+        <span itemprop="region">alexandria </span>
+        <span itemprop="country-name">Egypt </span>
+        <span itemprop="postal-code">11371</span>
+      </div>
+      <div itemscope itemtype="http://data-vocabulary.org/Geo">
+        <span itemprop="latitude">38 N</span>
+        <span itemprop="longitude">77 W</span>
+      </div>
+    </div>
+    <section class="container">
+      <div class="form">
+        <h1>local storage task</h1>
+        <form action="./welcome.html" target="_blank">
+          <input
+            id="name"
+            type="text"
+            placeholder="user name"
+            pattern="[A-Za-z]{5}"
+            required
+          />
+          <p>the required name must only be alphabetic characters</p>
+          <input id="email" type="email" placeholder="Email" required />
+          <p>It does not contain special characters except @</p>
+          <input type="submit" id="submit-btn" />
+        </form>
+      </div>
+    </section>
+    <hr />
+    <section class="container worker">
+      <div class="worker-task">
+        <h1>Worker Task</h1>
+        <button class="btn btn--1">color changer</button>
+        <button class="btn btn--2">summition</button>
+      </div>
+    </section>
+    <hr />
+    <div class="container">
+      <h1>Geo location task</h1>
+      <button class="btn" id="loc-btn">share location</button>
+    </div>
+    <hr />
+    <script src="./script.js"></script>
+  </body>
+</html>

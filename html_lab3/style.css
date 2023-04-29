@@ -1,0 +1,27 @@
+.micro-data {
+  display: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+input:invalid {
+  border-color: red;
+}
+input:valid {
+  border-color: blue;
+}
+input:valid + p {
+  visibility: hidden;
+}
+input:invalid + p {
+  visibility: visible;
+}
+.btn {
+  margin-left: 15px;
+  padding: 20px;
+  border-radius: 10px;
+}
