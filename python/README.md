@@ -50,3 +50,9 @@ This class represents the main application and has the following methods:
 | `list_employees()`       | Lists all employees currently in the system.                     |
 | `fire_employee()` | Fires an employee from the system.                             |
 | `quit_program()`         | Exits the application.   
+
+TO RUN APPLICATION 
+``` 
+run main.py script
+``` 
+
