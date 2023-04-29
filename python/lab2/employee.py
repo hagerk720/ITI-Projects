@@ -1,38 +1,55 @@
-from  db_connection import * 
-# from  crud import * 
+from  db_handler import * 
 class Employee:
+    db_conn = DBHandler("localhost", "root", "01144342836", "employees")
     employees = []
-    db_conn ={}
-    def __init__(self, first_name ,last_name , age ,dept , salary):
-        Employee.db_conn = DBHandler("localhost","root" ,"01144342836" , "employees")
+    def __init__(self, first_name, last_name, age, dept, salary, is_manager=False):
         self.first_name = first_name
         self.last_name = last_name
         self.age = age
         self.dept = dept
         self.salary = salary
-        Employee.employees.append( self )
+        self.id = None
+        self.is_manager = is_manager
+        self.employees = []
+        # Insert the employee into the database and get the auto-generated ID
+        self.id = Employee.db_conn.insert_employee(self)
+        Employee.employees.append(self)
 
-    def transfer(self,new_dept):
-        self.dept=new_dept
+    def transfer(self, new_dept):
+        # Update the department of the employee in the database
+        Employee.db_conn.update_employee_department(self.id, new_dept)
+        # Update the department of the employee object
+        self.dept = new_dept
 
-    # remove an employee from the static list
     @staticmethod
-    def fire(employee):
-        Employee.employees.remove(employee)
-        print(f"{employee.first_name} {employee.last_name} has been fired.")
+    def fire(employee_id):
+        # Find the employee with the given id
+        employee = None
+        for emp in Employee.employees:
+            if emp.id == employee_id:
+                employee = emp
+                break
+        
+        if employee:
+            # Remove the employee from the employees list
+            Employee.employees.remove(employee)
+            # Delete the employee from the database
+            Employee.db_conn.delete_employee(employee.id)
+            print(f"{employee.first_name} {employee.last_name} has been fired.")
+        else:
+            print(f"No employee with id {employee_id} found.")
 
     # show all employees
-    def show_all_employees():
-        for employee in Employee.employees:
-            print(f"Employee object: {employee.first_name} {employee.last_name}")
+    @classmethod
+    def show_all_employees(cls):
+       employees = cls.db_conn.get_all()
+       cls.print_employees(employees)
 
+    def print_employees(rows):
+        print("{:<5} {:<15} {:<15} {:<5} {:<15} {:<10}".format(
+            "ID", "First Name", "Last Name", "Age", "Department", "Salary"))
+        print("-" * 70)
+        for row in rows:
+            print("{:<5} {:<15} {:<15} {:<5} {:<15} {:<10}".format(
+                row[0], row[1], row[2], row[3], row[4], row[5]))
     
-e =  Employee("hager" , "khaled", 24 , "comm" , 9000)
-# e1 =  Employee("mariam" , "khaled", 24 , "comm" , 9000)
-# Employee.fire(e)
-# Employee.show_all_employees()
-# Employee.__db_connection = DBConnection("localhost","root" ,"01144342836" , "employees")
-
-db =  DBHandler("localhost","root" ,"01144342836" , "employees")
-connection = db.connect()
-db.create_table(connection)
