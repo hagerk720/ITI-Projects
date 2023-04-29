@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<employees>
+    <employee>
+        <name>Employee Name: Hager Khaled</name>
+        <phone type="work">Work phone: 01144342368</phone>
+        <phone type="mobile">Mobile phone: 01144342836</phone>
+        <phone type="home">Mobile phone: 5615297</phone>
+        <address>
+            <street>Street: Sidi bisher.</street>
+            <city>City: alex</city>
+            <country>Country: Egypt</country>
+            <building>Building: 16</building>
+            <region>Region: Alex</region>
+        </address>
+        <email>Email: hager@gmail.com</email>
+    </employee>
+    <employee>
+        <name>Employee Name: Mariam Khaled</name>
+        <phone type="work">Work phone: 0111872687</phone>
+        <phone type="mobile">Mobile phone: 0111872687</phone>
+        <phone type="home">Mobile phone: 5615297</phone>
+        <address>
+            <street>Street: Sidi bisher.</street>
+            <city>City: alex</city>
+            <country>Country: Egypt</country>
+            <building>Building: 16</building>
+            <region>Region: Alex</region>
+        </address>
+        <email>Email: mariam@gmail.com</email>
+    </employee>
+</employees>

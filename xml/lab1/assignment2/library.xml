@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/css" ?>
+<library>
+  <location>New York City</location>
+  <description>The New York Public Library is a public library system in New York City.</description>
+  <librarian>John Smith</librarian>
+  <books>
+    <book>
+      <title>War and Peace</title>
+      <isbn>978-0140447934</isbn>
+      <author>Leo Tolstoy</author>
+      <preface>This book is dedicated to my wife.</preface>
+      <parts>
+        <part>
+          <title>Part I</title>
+          <chapters>
+            <chapter>
+              <title>Chapter 1</title>
+              <summary>Introduction to the story.</summary>
+              <sections>
+                <section>
+                  <paragraph>It was the best of times, it was the worst of times...</paragraph>
+                </section>
+                <section>
+                  <paragraph>It was a dark and stormy night...</paragraph>
+                </section>
+              </sections>
+            </chapter>
+            <chapter>
+              <title>Chapter 2</title>
+              <summary>The main characters are introduced.</summary>
+              <sections>
+                <section>
+                  <paragraph>Prince Andrei Bolkonsky was a man of great wealth and influence...</paragraph>
+                </section>
+                <section>
+                  <paragraph>Pierre Bezukhov was an illegitimate son of a wealthy count...</paragraph>
+                </section>
+              </sections>
+            </chapter>
+          </chapters>
+        </part>
+        <part>
+          <title>Part II</title>
+          <chapters>
+            <chapter>
+              <title>Chapter 3</title>
+              <summary>The battle of Borodino is described.</summary>
+              <sections>
+                <section>
+                  <paragraph>The battle raged on for hours...</paragraph>
+                </section>
+                <section>
+                  <paragraph>Count Rostov was wounded in the battle...</paragraph>
+                </section>
+              </sections>
+            </chapter>
+            <chapter>
+              <title>Chapter 4</title>
+              <summary>The love story between Natasha and Prince Andrei.</summary>
+              <sections>
+                <section>
+                  <paragraph>Natasha Rostova was a young and beautiful girl...</paragraph>
+                </section>
+                <section>
+                  <paragraph>Prince Andrei Bolkonsky fell in love with Natasha...</paragraph>
+                </section>
+              </sections>
+            </chapter>
+          </chapters>
+        </part>
+      </parts>
+    </book>
+    <book>
+      <title>The Great Gatsby</title>
+      <isbn>978-0743273565</isbn>
+      <author>F. Scott Fitzgerald</author>
+      <preface>This book is dedicated to my wife Zelda.</preface>
+      <parts>
+        <part>
+          <title>Part I</title>
+          <chapters>
+            <chapter>
+              <title>Chapter 1</title>
+              <summary>The narrator introduces himself and his wealthy neighbor Jay Gatsby.</summary>
+              <sections>
+                <section>
+                  <paragraph>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since...</paragraph>
+                </section>
+                <section>
+                  <paragraph>My neighbor, Jay Gatsby, was a mysterious and wealthy man...</paragraph>
+                </section>
+              </sections>
+            </chapter>
+            <chapter>
+              <title>Chapter 2</title>
+              <summary>The narrator attends a party at Gatsby's mansion.</summary>
+              <sections>
+                <section>
+                  <paragraph>At Gatsby's party, I met many interesting people...</paragraph>
+                </section>
+                <section>
+                  <paragraph>Gatsby was a gracious host, but he seemed distant and preoccupied...</paragraph>
+                </section>
+              </sections>
+            </chapter>
+          </chapters>
+        </part>
+        <part>
+          <title>Part II</title>
+          <chapters>
+            <chapter>
+              <title>Chapter 3</title>
+              <summary>Gatsby reveals his past to the narrator.</summary>
+              <sections>
+                <section>
+                  <paragraph>Gatsby was not always wealthy...</paragraph>
+                </section>
+                <section>
+                  <paragraph>He had a great love in his life, a woman named Daisy...</paragraph>
+                </section>
+              </sections>
+            </chapter>
+            <chapter>
+              <title>Chapter 4</title>
+              <summary>Gatsby and Daisy are reunited.</summary>
+              <sections>
+                <section>
+                  <paragraph>Gatsby and Daisy rekindled their relationship...</paragraph>
+                </section>
+                <section>
+                  <paragraph>But their happiness was short-lived...</paragraph>
+                </section>
+              </sections>
+            </chapter>
+          </chapters>
+          </part>
+        </parts>
+    </book>
+  </books>
+</library>

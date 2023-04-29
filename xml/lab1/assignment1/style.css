@@ -1,0 +1,67 @@
+/* style the employee list */
+employees {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+employee {
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: calc(33.33% - 2rem);
+}
+
+/* style the employee name */
+employee > name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem;
+}
+
+/* style the phones list */
+phones {
+  margin: 0;
+  padding: 0;
+}
+
+phone {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+phone::before {
+  content: attr(type) ": ";
+  font-weight: bold;
+}
+
+/* style the addresses list */
+addresses {
+  margin: 0;
+  padding: 0;
+}
+
+address {
+  display: block;
+  margin: 0.5rem 0;
+}
+
+street,
+building_number {
+  font-weight: bold;
+}
+
+city::after,
+country::before {
+  content: ", ";
+}
+
+/* style the email */
+email {
+  display: block;
+  font-style: italic;
+  margin: 0.5rem 0 0;
+}
