@@ -16,7 +16,7 @@ This class represents an individual employee and has the following methods:
 
 ## Manager
 
-This class represents a manager and has the following methods:
+This class represents a manager which inherits from class employee and has the following methods :
 
 | Method                  | Description                                                      |
 |-------------------------|------------------------------------------------------------------|
