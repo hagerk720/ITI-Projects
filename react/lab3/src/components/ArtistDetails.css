@@ -1,0 +1,15 @@
+body {
+  margin-top: 60px;
+}
+
+.centered {
+  margin: 0px auto;
+}
+
+#biography {
+  margin-top: 10px;
+}
+
+#achievements {
+  margin-top: 10px;
+}
