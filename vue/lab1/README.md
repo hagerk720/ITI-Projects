@@ -1,24 +1,5 @@
-# lab1
+# Lab 1 
+Registration Based on Role
 
-## Project setup
-```
-npm install
-```
+https://github.com/hagerk720/ITI-Projects/assets/78926069/3481bdf7-1bf4-4648-baf3-599761bb5669
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
