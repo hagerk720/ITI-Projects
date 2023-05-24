@@ -1,0 +1,59 @@
+{% extends 'main/base_layout.html' %} {% block main-content %}
+<div class="container">
+  <div class="row">
+    <div class="text-center col-12">
+      <form
+        method="post"
+        action="{% url 'bookstore:book-create' %}"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %} 
+        {{ form.as_p }}
+
+        {% comment %}
+        <div class="form-group">
+          <label for="bookName">book Name</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="bookName"
+            placeholder="Enter name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="bookDesc"> Description</label>
+          <input
+            type="text"
+            name="desc"
+            class="form-control"
+            id="bookDesc"
+            placeholder="Enter Description"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="bookRates"> rate</label>
+          <input
+            type="number"
+            name="rates"
+            class="form-control"
+            id="bookrates"
+            placeholder="Enter Priority"
+          />
+        </div>
+        {% endcomment %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div class="text-center mt-5" style="display: inline">
+          <a href="{% url 'bookstore:book-index'%}">
+            <button type="button" class="btn btn-info">
+              Back to Movie Index
+            </button>
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

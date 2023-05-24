@@ -1,0 +1,20 @@
+{% extends 'main/base_layout.html' %} {% block main-content %}
+<h1>Welcome to todo details</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Author</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="color: red">
+      <td>{{ book.id }}</td>
+      <td>{{ book.name }}</td>
+      <td>{{ book.author_name }}</td>
+    </tr>
+  </tbody>
+</table>
+<a href="{% url 'bookstore:book-index' %}"> Back to Index</a>
+{% endblock %}

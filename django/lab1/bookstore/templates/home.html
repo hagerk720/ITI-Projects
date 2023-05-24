@@ -1,0 +1,49 @@
+{% extends 'main/base_layout.html' %} {% block main-content%}
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <td>ID</td>
+      <td>Name</td>
+      <td>Author</td>
+      <td>Actions</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for book in books_list%}
+    <tr style="color: red">
+      <td>{{ book.id }}</td>
+      <td>{{ book.name }}</td>
+      <td>{{ book.author_name }}</td>
+
+      <td>
+        <a
+          class="btn btn-info"
+          href="{% url 'bookstore:book-details' book.id %}"
+        >
+          View</a
+        >
+        <a
+          class="btn btn-info"
+          href="{% url 'bookstore:book-update' book.id %}"
+        >
+          Update</a
+        >
+        <a
+          class="btn btn-danger"
+          href="{% url 'bookstore:book-delete' book.id %}"
+        >
+          Delete</a
+        >
+      </td>
+    </tr>
+
+    {% empty %}
+    <tr>
+      <td colspan="3" class="text-center">sorr, not task in list</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<a class="btn btn-danger" href="{% url 'bookstore:book-create' %}"> create</a>
+{% endblock %}
