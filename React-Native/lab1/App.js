@@ -6,6 +6,7 @@ import {
   Image,
   Text,
   View,
+  Dimensions,
 } from "react-native";
 
 export default function App() {
@@ -30,11 +31,20 @@ export default function App() {
   );
 }
 
+const screenWidth = Dimensions.get("window").width;
+const screenHeight = Dimensions.get("window").height;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
     justifyContent: "center",
+    alignItems: "center",
+  },
+  scrollViewContent: {
+    alignItems: "center",
+  },
+  image: {
+    width: screenWidth,
+    height: screenHeight,
   },
 });
